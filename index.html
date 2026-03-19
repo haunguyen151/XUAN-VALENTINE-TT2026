@@ -63,8 +63,27 @@
         </div>
     </nav>
 
+    <!-- TOP-LEVEL TABS (TEAM TABS) -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 md:mt-8">
+        <div class="flex justify-center mb-2 md:mb-4">
+            <div class="bg-gray-200/60 p-1.5 rounded-full shadow-inner border border-gray-300 flex w-full max-w-md relative z-30">
+                <button onclick="switchTeamTab('team-design')" id="btn-team-design" class="flex-1 py-3 px-4 rounded-full font-bold text-sm md:text-base transition-all duration-300 bg-[#9A161F] text-white shadow-md flex items-center justify-center gap-2">
+                    <i data-lucide="pen-tool" class="w-4 h-4 shrink-0"></i> TEAM DESIGN
+                </button>
+                <button onclick="switchTeamTab('team-content')" id="btn-team-content" class="flex-1 py-3 px-4 rounded-full font-bold text-sm md:text-base transition-all duration-300 bg-transparent text-[#003366] hover:bg-white/60 flex items-center justify-center gap-2">
+                    <i data-lucide="file-text" class="w-4 h-4 shrink-0"></i> TEAM CONTENT
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- TEAM DESIGN PANEL (Chứa toàn bộ nội dung cũ) -->
+    <!-- ========================================== -->
+    <div id="team-design" class="team-panel block fade-in-section is-visible">
+
     <!-- MAIN MENU TABS (Điều hướng cấp 1) -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 md:mt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 md:mt-6">
         <div class="flex justify-center mb-6 md:mb-10">
             <div class="bg-white p-1.5 rounded-3xl sm:rounded-full shadow-md border border-gray-200 flex flex-col sm:flex-row w-full max-w-4xl relative z-20 gap-1 sm:gap-0">
                 <button onclick="switchMainTab('main-projects')" id="btn-main-projects" class="flex-1 py-3 px-4 rounded-full font-bold text-xs sm:text-sm md:text-base transition-all duration-300 bg-[#003366] text-white shadow-lg flex items-center justify-center gap-2">
@@ -630,11 +649,167 @@
         </div>
 
     </main>
+    </div> <!-- END OF TEAM DESIGN PANEL -->
+
+    <!-- ========================================== -->
+    <!-- TEAM CONTENT PANEL (Mới Thêm) -->
+    <!-- ========================================== -->
+    <!-- TEAM CONTENT PANEL -->
+    <!-- ========================================== -->
+    <div id="team-content" class="team-panel hidden fade-in-section">
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 md:mt-12">
+            <!-- Header Section -->
+            <div class="text-center mb-8 md:mb-10">
+                <div class="relative inline-block mb-3 md:mb-6">
+                    <h2 class="font-serif-vi text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-[#003366] font-bold drop-shadow-lg relative z-10 px-2 leading-tight uppercase max-w-4xl mx-auto text-balance">
+                        HỖ TRỢ TRUYỀN THÔNG GTM CHO BST MỚI & CTKM
+                    </h2>
+                    <div class="absolute -bottom-1 md:-bottom-2 left-[10%] right-[10%] h-2 md:h-4 bg-[#B8860B]/20 rounded-full blur-md -z-10"></div>
+                </div>
+                <p class="font-sans-vi text-gray-600 text-sm md:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed text-balance">
+                    Báo cáo hiệu quả triển khai nội dung tiếp thị, phủ sóng thông điệp <span class="font-semibold text-[#003366]">Xuân, Valentine, Thần Tài</span> trên các nền tảng Owned & Earned Media.
+                </p>
+            </div>
+
+            <!-- CONTENT SUB-TABS (Blog / Zalo) -->
+            <div class="flex justify-center mb-8 md:mb-12">
+                <div class="bg-white p-1.5 rounded-full shadow-sm border border-gray-200 flex flex-row w-full max-w-lg relative z-20">
+                    <button onclick="switchContentTab('content-blog')" id="btn-content-blog" class="flex-1 py-2.5 sm:py-3 px-4 rounded-full font-bold text-xs sm:text-sm md:text-base transition-all duration-300 bg-[#B8860B] text-white shadow-md flex items-center justify-center gap-2">
+                        <i data-lucide="layout" class="w-4 h-4 shrink-0"></i> <span>Blog</span>
+                    </button>
+                    <button onclick="switchContentTab('content-zalo')" id="btn-content-zalo" class="flex-1 py-2.5 sm:py-3 px-4 rounded-full font-bold text-xs sm:text-sm md:text-base transition-all duration-300 bg-transparent text-gray-600 hover:bg-gray-50 flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4 shrink-0"></i> <span>Zalo Broadcast</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ========================= -->
+            <!-- SUB-TAB 1: BLOG -->
+            <!-- ========================= -->
+            <div id="content-blog" class="content-sub-panel block fade-in-section is-visible">
+                <!-- Dashboard Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10">
+                    <div class="glass-panel rounded-2xl p-6 border border-gray-100 shadow-sm flex items-center gap-4 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-[#003366] shrink-0">
+                            <i data-lucide="eye" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] sm:text-xs text-gray-500 font-bold tracking-wider uppercase mb-1">Tổng lượt xem nội dung</p>
+                            <h4 class="text-2xl sm:text-3xl font-bold text-[#9A161F]">100.000+</h4>
+                        </div>
+                    </div>
+                    <div class="glass-panel rounded-2xl p-6 border border-gray-100 shadow-sm flex items-center gap-4 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center text-[#B8860B] shrink-0">
+                            <i data-lucide="file-text" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] sm:text-xs text-gray-500 font-bold tracking-wider uppercase mb-1">Bài viết GTM Nội bộ</p>
+                            <h4 class="text-2xl sm:text-3xl font-bold text-[#003366]">48 <span class="text-base sm:text-lg font-medium text-gray-500">bài</span></h4>
+                        </div>
+                    </div>
+                    <div class="glass-panel rounded-2xl p-6 border border-gray-100 shadow-sm flex items-center gap-4 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-[#9A161F] shrink-0">
+                            <i data-lucide="globe" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] sm:text-xs text-gray-500 font-bold tracking-wider uppercase mb-1">Bài PR Báo chí</p>
+                            <h4 class="text-2xl sm:text-3xl font-bold text-[#003366]">12 <span class="text-base sm:text-lg font-medium text-gray-500">bài</span></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Filter -->
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8">
+                    <button onclick="filterArticles('all')" id="btn-filter-all" class="article-filter-btn px-5 sm:px-6 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 bg-[#003366] text-white shadow-md">Tất cả</button>
+                    <button onclick="filterArticles('news')" id="btn-filter-news" class="article-filter-btn px-5 sm:px-6 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 bg-white text-gray-600 border border-gray-200 hover:border-[#003366] hover:text-[#003366]">Tin tức GTM</button>
+                    <button onclick="filterArticles('press')" id="btn-filter-press" class="article-filter-btn px-5 sm:px-6 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 bg-white text-gray-600 border border-gray-200 hover:border-[#003366] hover:text-[#003366]">Báo chí</button>
+                </div>
+
+                <!-- Articles Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12" id="articles-grid">
+                    
+                    <!-- Card 1 -->
+                    <div class="article-card news bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                        <div class="h-48 bg-gray-200 relative overflow-hidden group">
+                            <img src="https://placehold.co/600x400/003366/FFFFFF?text=Tin+Nội+Bộ&font=Montserrat" alt="Thumbnail" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-4 left-4 bg-[#003366] text-white text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">GTM Nội bộ</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <p class="text-xs text-gray-400 mb-2 font-medium flex items-center gap-1.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 10/01/2024</p>
+                            <h4 class="font-bold text-[#003366] text-lg sm:text-xl mb-3 line-clamp-2 hover:text-[#B8860B] transition-colors cursor-pointer leading-tight">PNJ ra mắt BST trang sức Kim Bảo Như Ý Xuân 2024</h4>
+                            <p class="text-gray-600 text-sm mb-5 line-clamp-3 leading-relaxed">Bộ tài liệu hướng dẫn chi tiết USP sản phẩm, cách thức trưng bày và kịch bản tư vấn dành riêng cho Cửa hàng trưởng và TVV toàn hệ thống.</p>
+                            <div class="mt-auto pt-4 border-t border-gray-100">
+                                <a href="#" class="text-sm font-bold text-[#B8860B] flex items-center gap-2 hover:text-[#9A161F] transition-colors">Đọc tài liệu <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="article-card press bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                        <div class="h-48 bg-gray-200 relative overflow-hidden group">
+                            <img src="https://placehold.co/600x400/9A161F/FFFFFF?text=Báo+Chí&font=Montserrat" alt="Thumbnail" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-4 left-4 bg-[#B8860B] text-white text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">Báo chí</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <p class="text-xs text-gray-400 mb-2 font-medium flex items-center gap-1.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 05/02/2024</p>
+                            <h4 class="font-bold text-[#003366] text-lg sm:text-xl mb-3 line-clamp-2 hover:text-[#B8860B] transition-colors cursor-pointer leading-tight">Bí quyết chọn trang sức Thần Tài rước lộc đầu năm</h4>
+                            <p class="text-gray-600 text-sm mb-5 line-clamp-3 leading-relaxed">Bài viết PR định hướng khách hàng tiêu dùng trong dịp lễ Thần Tài, phủ sóng trên các trang báo mạng lớn như VnExpress, Kenh14, Thanh Niên.</p>
+                            <div class="mt-auto pt-4 border-t border-gray-100">
+                                <a href="#" class="text-sm font-bold text-[#B8860B] flex items-center gap-2 hover:text-[#9A161F] transition-colors">Xem bài viết <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="article-card news bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                        <div class="h-48 bg-gray-200 relative overflow-hidden group">
+                            <img src="https://placehold.co/600x400/003366/FFFFFF?text=Tin+Nội+Bộ&font=Montserrat" alt="Thumbnail" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-4 left-4 bg-[#003366] text-white text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">GTM Nội bộ</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <p class="text-xs text-gray-400 mb-2 font-medium flex items-center gap-1.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 12/02/2024</p>
+                            <h4 class="font-bold text-[#003366] text-lg sm:text-xl mb-3 line-clamp-2 hover:text-[#B8860B] transition-colors cursor-pointer leading-tight">Cẩm nang tư vấn BST Valentine - Trao gửi yêu thương</h4>
+                            <p class="text-gray-600 text-sm mb-5 line-clamp-3 leading-relaxed">Đồng bộ thông điệp truyền thông từ khối xuống cửa hàng, cung cấp các key selling points đắt giá để TVV chốt sale hiệu quả ngày Lễ Tình Nhân.</p>
+                            <div class="mt-auto pt-4 border-t border-gray-100">
+                                <a href="#" class="text-sm font-bold text-[#B8860B] flex items-center gap-2 hover:text-[#9A161F] transition-colors">Đọc tài liệu <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- SMT Takeaway -->
+                <div class="bg-white border-l-4 border-[#B8860B] rounded-r-2xl p-6 md:p-8 shadow-md flex flex-col md:flex-row items-start md:items-center gap-5 lg:gap-8 mb-8">
+                    <div class="bg-amber-50 p-3 md:p-4 rounded-full flex-shrink-0 mt-1 md:mt-0 shadow-inner">
+                        <i data-lucide="award" class="w-6 h-6 md:w-8 md:h-8 text-[#B8860B]"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-[#003366] mb-2 lg:mb-3 uppercase">Đánh giá chiến lược</h3>
+                        <p class="text-gray-600 text-sm md:text-base leading-relaxed text-balance">
+                            Chất lượng nội dung đạt <strong>chuẩn guideline</strong> đang là đòn bẩy cốt lõi thúc đẩy GTM cho các Bộ sưu tập. Việc đầu tư hình ảnh đã trực tiếp tạo ra <strong>hơn 100.000 lượt xem tự nhiên (Organic views)</strong>, giúp tối ưu hóa chi phí quảng cáo và tiếp cận sâu sát tệp khách hàng tiềm năng của PNJ trên các kênh sở hữu (Owned media).
+                        </p>
+                    </div>
+                </div>
+            </div> <!-- END BLOG SUB-TAB -->
+
+            <!-- ========================= -->
+            <!-- SUB-TAB 2: ZALO BROADCAST -->
+            <!-- ========================= -->
+            <div id="content-zalo" class="content-sub-panel hidden fade-in-section">
+                <div class="glass-panel rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex flex-col items-center justify-center p-12 md:p-24">
+                    <i data-lucide="message-square" class="w-16 h-16 md:w-24 md:h-24 text-[#B8860B] mb-6 animate-pulse"></i>
+                    <h3 class="font-bold text-xl md:text-2xl text-[#003366] mb-2">ĐANG XÂY DỰNG ZALO BROADCAST</h3>
+                    <p class="text-gray-500 text-center max-w-md">Tab này sẽ dùng để hiển thị các số liệu và báo cáo hiệu quả của kênh Zalo OA.</p>
+                </div>
+            </div>
+
+        </main>
+    </div>
     
     <!-- Footer -->
     <footer class="mt-8 md:mt-12 text-center pb-8 border-t border-gray-200 pt-6 md:pt-8 max-w-7xl mx-auto px-4">
         <p class="text-gray-400 text-[10px] sm:text-xs md:text-sm font-sans-vi">
-            © 2026 PNJ Creative Hub. Báo cáo nội bộ Khối KHBL.
+            © 2026 PNJ Creative Hub. Báo cáo nội bộ K.KHBL
         </p>
     </footer>
 
@@ -651,6 +826,32 @@
                 });
             }, 100);
         });
+
+        // 0. Logic chuyển đổi TEAM TABS (Cấp cao nhất)
+        function switchTeamTab(teamTabId) {
+            // Ẩn tất cả panel của Team
+            document.querySelectorAll('.team-panel').forEach(panel => {
+                panel.classList.add('hidden');
+                panel.classList.remove('block', 'is-visible');
+            });
+
+            // Reset trạng thái nút Team
+            document.querySelectorAll('#btn-team-design, #btn-team-content').forEach(btn => {
+                btn.classList.remove('bg-[#9A161F]', 'text-white', 'shadow-md');
+                btn.classList.add('bg-transparent', 'text-[#003366]', 'hover:bg-white/60');
+            });
+
+            // Hiển thị panel được chọn
+            const activePanel = document.getElementById(teamTabId);
+            activePanel.classList.remove('hidden');
+            activePanel.classList.add('block');
+            setTimeout(() => activePanel.classList.add('is-visible'), 50);
+
+            // Cập nhật màu nút Team
+            const activeBtn = document.getElementById('btn-' + teamTabId);
+            activeBtn.classList.remove('bg-transparent', 'text-[#003366]', 'hover:bg-white/60');
+            activeBtn.classList.add('bg-[#9A161F]', 'text-white', 'shadow-md');
+        }
 
         // 1. Logic chuyển đổi MENU CHÍNH (Main Tabs)
         function switchMainTab(mainTabId) {
@@ -701,6 +902,68 @@
             const activeBtn = document.getElementById('btn-' + tabId);
             activeBtn.classList.remove('bg-white', 'text-[#003366]', 'border-gray-200', 'shadow-sm');
             activeBtn.classList.add('bg-[#9A161F]', 'text-white', 'shadow-md', 'border-[#9A161F]');
+        }
+
+        // 3. Logic chuyển đổi SUB-TAB bên TEAM CONTENT (Blog / Zalo)
+        function switchContentTab(tabId) {
+            document.querySelectorAll('.content-sub-panel').forEach(panel => {
+                panel.classList.add('hidden');
+                panel.classList.remove('block', 'is-visible');
+            });
+
+            document.querySelectorAll('#btn-content-blog, #btn-content-zalo').forEach(btn => {
+                btn.classList.remove('bg-[#B8860B]', 'text-white', 'shadow-md');
+                btn.classList.add('bg-transparent', 'text-gray-600', 'hover:bg-gray-50');
+            });
+
+            const activePanel = document.getElementById(tabId);
+            activePanel.classList.remove('hidden');
+            activePanel.classList.add('block');
+            setTimeout(() => {
+                activePanel.style.transitionDelay = '0ms'; 
+                activePanel.classList.add('is-visible');
+            }, 50);
+
+            const activeBtn = document.getElementById('btn-' + tabId.replace('content-', 'content-'));
+            activeBtn.classList.remove('bg-transparent', 'text-gray-600', 'hover:bg-gray-50');
+            activeBtn.classList.add('bg-[#B8860B]', 'text-white', 'shadow-md');
+        }
+
+        // 4. Logic lọc bài viết TEAM CONTENT (Bên trong tab Blog)
+        function filterArticles(category) {
+            // Đặt lại trạng thái các nút lọc
+            document.querySelectorAll('.article-filter-btn').forEach(btn => {
+                btn.classList.remove('bg-[#003366]', 'text-white', 'shadow-md');
+                btn.classList.add('bg-white', 'text-gray-600', 'border-gray-200');
+            });
+
+            // Active nút đang bấm
+            const activeBtn = document.getElementById('btn-filter-' + category);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-gray-600', 'border-gray-200');
+                activeBtn.classList.add('bg-[#003366]', 'text-white', 'shadow-md');
+            }
+
+            // Lọc và thêm hiệu ứng mờ cho các thẻ Card
+            const cards = document.querySelectorAll('.article-card');
+            cards.forEach(card => {
+                card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                card.style.opacity = '0';
+                card.style.transform = 'scale(0.95)';
+                
+                setTimeout(() => {
+                    if (category === 'all' || card.classList.contains(category)) {
+                        card.style.display = 'flex';
+                        // Đợi một tích tắc để display:flex áp dụng xong rồi mới mờ dần lên
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }, 300);
+            });
         }
     </script>
 </body>
