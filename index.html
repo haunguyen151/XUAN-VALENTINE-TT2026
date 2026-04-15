@@ -295,15 +295,40 @@
                             </div>
                             <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl">KHCS</h3>
                         </div>
-                        <ul class="space-y-3 sm:space-y-4 mb-6 flex-1">
-                            <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
-                                <i data-lucide="check-circle-2" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>
-                                <span>28 KV, poster cho các CT (Khối / sub - brand):</span>
-                            </li>
-                            <li class="pl-6 text-xs sm:text-sm lg:text-base text-gray-600 list-disc list-inside">Thi đua nội bộ</li>
-                            <li class="pl-6 text-xs sm:text-sm lg:text-base text-gray-600 list-disc list-inside">Khen thưởng ( Chương Trình Nhật Bản)</li>
-                            <li class="pl-6 text-xs sm:text-sm lg:text-base text-gray-600 list-disc list-inside">Thông báo</li>
-                        </ul>
+                        <div class="flex-1 flex flex-col">
+                            <ul class="space-y-3 sm:space-y-4 mb-4">
+                                <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>
+                                    <span>28 KV, poster cho các CT (Khối / sub - brand):</span>
+                                </li>
+                                <li class="pl-6 text-xs sm:text-sm lg:text-base text-gray-600 list-disc list-inside">Thi đua nội bộ</li>
+                                <li class="pl-6 text-xs sm:text-sm lg:text-base text-gray-600 list-disc list-inside">Khen thưởng ( Chương Trình Nhật Bản)</li>
+                                <li class="pl-6 text-xs sm:text-sm lg:text-base text-gray-600 list-disc list-inside">Thông báo</li>
+                            </ul>
+                            
+                            <!-- Thư viện ảnh tham khảo dạng cuộn ngang có nút điều hướng -->
+                            <div class="relative w-full mt-auto mb-4 group">
+                                <!-- Nút sang trái -->
+                                <button onclick="document.getElementById('khcs-scroll-container').scrollBy({left: -200, behavior: 'smooth'})" 
+                                    class="absolute left-[-12px] sm:left-[-16px] top-[40%] -translate-y-1/2 z-10 bg-white border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] rounded-full p-1.5 text-[#003366] hover:bg-[#003366] hover:text-white transition-all focus:outline-none opacity-90 hover:opacity-100 flex items-center justify-center cursor-pointer">
+                                    <i data-lucide="chevron-left" class="w-4 h-4 md:w-5 md:h-5"></i>
+                                </button>
+
+                                <div id="khcs-scroll-container" class="w-full overflow-x-auto flex gap-3 pb-3 pt-1 px-1 custom-scrollbar-container scroll-smooth snap-x snap-mandatory">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776231540/wmyngj3bouqeasoabvyn.jpg" alt="KHCS 1" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776231540/ujdka8rxz5qvknmjjlwh.jpg" alt="KHCS 2" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776231540/zlm0z25hrwm6yndrikql.jpg" alt="KHCS 3" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776231540/tkzby2mwihz5wb2koivy.jpg" alt="KHCS 4" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776231540/vjsx0sqt6493hf4rc6wy.jpg" alt="KHCS 5" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                </div>
+
+                                <!-- Nút sang phải -->
+                                <button onclick="document.getElementById('khcs-scroll-container').scrollBy({left: 200, behavior: 'smooth'})" 
+                                    class="absolute right-[-12px] sm:right-[-16px] top-[40%] -translate-y-1/2 z-10 bg-white border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] rounded-full p-1.5 text-[#003366] hover:bg-[#003366] hover:text-white transition-all focus:outline-none opacity-90 hover:opacity-100 flex items-center justify-center cursor-pointer">
+                                    <i data-lucide="chevron-right" class="w-4 h-4 md:w-5 md:h-5"></i>
+                                </button>
+                            </div>
+                        </div>
                         <div class="mt-auto pt-4 bg-[#F9F1E5] rounded-xl p-3 md:p-4 border border-[#B8860B]/30">
                             <p class="text-[#9A161F] font-bold text-xs sm:text-sm lg:text-base text-center flex items-center justify-center gap-1.5 md:gap-2">
                                 <i data-lucide="trending-up" class="w-4 h-4 lg:w-5 lg:h-5"></i> Tăng doanh thu hệ thống/KMH
@@ -339,14 +364,11 @@
                             </div>
                             <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl">CLHH</h3>
                         </div>
-                        <div class="bg-red-50 p-4 md:p-6 rounded-xl border border-red-100 flex-1 flex flex-col justify-center min-h-[120px] lg:min-h-[150px]">
-                            <i data-lucide="award" class="w-8 h-8 md:w-10 md:h-10 text-[#9A161F] mx-auto mb-3 md:mb-4"></i>
-                            <p class="text-xs sm:text-sm lg:text-base font-bold text-center text-[#9A161F] leading-relaxed">
-                                Sản xuất nội dung, Thiết kế KV, sản xuất videos các hạng mục:
-<br/>
-                                <span class="text-base sm:text-lg lg:text-2xl font-serif-vi block mt-1">"E- Brochure SN PNJ"</span>
-                            </p>
-                        </div>
+                        <p class="text-xs sm:text-sm lg:text-base font-semibold text-gray-800 mb-3">Sản xuất nội dung, Thiết kế KV, sản xuất videos các hạng mục:</p>
+                        <ul class="space-y-3 mb-4 flex-1">
+                            <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600"><i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>E- Brochure SN PNJ</li>
+                            <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600"><i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>Sản xuất video onsite (109 sku)</li>
+                        </ul>
                     </div>
 
                     <!-- Box 4: PNS -->
@@ -377,12 +399,36 @@
                             </div>
                             <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl">RETAIL MKT</h3>
                         </div>
-                        <div class="flex items-start gap-3 md:gap-4 text-xs sm:text-sm lg:text-base text-gray-700 bg-gray-50 p-5 lg:p-6 rounded-xl border border-gray-100 flex-1">
-                            <i data-lucide="printer" class="w-6 h-6 lg:w-8 lg:h-8 text-[#B8860B] shrink-0 mt-1"></i>
-                            <p class="leading-relaxed text-balance">
-                                Adapt <strong class="text-[#9A161F] text-sm md:text-base lg:text-lg"> 60 hạng mục</strong> CT SN PNJ từ
-master KV cho các sub- brand.
-                            </p>
+                        <div class="bg-gray-50 p-4 lg:p-5 rounded-xl border border-gray-100 flex-1 flex flex-col justify-between">
+                            <div class="flex items-start gap-3 md:gap-4 text-xs sm:text-sm lg:text-base text-gray-700 mb-4">
+                                <i data-lucide="printer" class="w-6 h-6 lg:w-8 lg:h-8 text-[#B8860B] shrink-0 mt-1"></i>
+                                <p class="leading-relaxed text-balance">
+                                    Adapt <strong class="text-[#9A161F] text-sm md:text-base lg:text-lg"> 60 hạng mục</strong> CT SN PNJ từ master KV cho các sub- brand.
+                                </p>
+                            </div>
+                            
+                            <!-- Thư viện ảnh tham khảo dạng cuộn ngang có nút điều hướng -->
+                            <div class="relative w-full mt-2 group">
+                                <!-- Nút sang trái -->
+                                <button onclick="document.getElementById('retail-scroll-container').scrollBy({left: -200, behavior: 'smooth'})" 
+                                    class="absolute left-[-12px] sm:left-[-16px] top-[40%] -translate-y-1/2 z-10 bg-white border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] rounded-full p-1.5 text-[#003366] hover:bg-[#003366] hover:text-white transition-all focus:outline-none opacity-90 hover:opacity-100 flex items-center justify-center cursor-pointer">
+                                    <i data-lucide="chevron-left" class="w-4 h-4 md:w-5 md:h-5"></i>
+                                </button>
+
+                                <div id="retail-scroll-container" class="w-full overflow-x-auto flex gap-3 pb-3 pt-1 px-1 custom-scrollbar-container scroll-smooth snap-x snap-mandatory">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776229692/fgzphmxwqxxv37xrmtrs.jpg" alt="Retail POSM 1" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776229692/gamu9bx1v79jnsr8djle.jpg" alt="Retail POSM 2" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776229692/mfcchmyas9mh2xc45chf.jpg" alt="Retail POSM 3" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776229692/u3wwx6elgekf6lvzcwkx.jpg" alt="Retail POSM 4" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776229692/cagvzw95wqgs4wrf4wil.jpg" alt="Retail POSM 5" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                </div>
+
+                                <!-- Nút sang phải -->
+                                <button onclick="document.getElementById('retail-scroll-container').scrollBy({left: 200, behavior: 'smooth'})" 
+                                    class="absolute right-[-12px] sm:right-[-16px] top-[40%] -translate-y-1/2 z-10 bg-white border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] rounded-full p-1.5 text-[#003366] hover:bg-[#003366] hover:text-white transition-all focus:outline-none opacity-90 hover:opacity-100 flex items-center justify-center cursor-pointer">
+                                    <i data-lucide="chevron-right" class="w-4 h-4 md:w-5 md:h-5"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
